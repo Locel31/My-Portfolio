@@ -99,7 +99,7 @@ export default {
       contactStaticData: {
         city: "Camolinas Poblacion Cordova, Cebu 6017",
         email: "jealoceldegamo@gmail.com",
-        phone: "0902321232",
+        phone: "09074299568",
       },
       components: {
         HomeComponent,
