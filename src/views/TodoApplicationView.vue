@@ -1,13 +1,13 @@
 <template>
-  <TodoApplicationComponent>
+  <div> test
+    </div>
 </template>
 
 <script>
-import TodoApplicationComponent from '@/components/TodoApplicationComponent.vue'
 
 export default {
     components: {
-        TodoApplicationComponent,
+        
     }
 }
 </script>
