@@ -36,7 +36,9 @@
             :class="{ ' active': index === currentIndex }">
                   {{ item }}
                 </li>
-              
+               <li class="nav-item">
+                <a href="/my-project/todo-applications"> My Project </a>
+                  </li>
               </ul>
             </div>
           </div>
@@ -59,7 +61,9 @@
             :class="{ ' active': index === currentIndex }">
                   {{ item }}
                 </li>
-              
+              <li class="nav-item">
+                <a href="/my-project/todo-applications"> My Project </a>
+                  </li>
               </ul>
             </div>
           </div>
@@ -94,10 +98,7 @@
           :city="contactStaticData.city"  
           :email="contactStaticData.email"  
           />
-            <component v-else-if="currentIndex === 4" 
-          :is="components.TodoApplicationComponent"
-         
-          />
+            
         </div>
       </transition>
     </div>
@@ -117,7 +118,9 @@
             :class="{ ' active': index === currentIndex }">
                   {{ item }}
                 </li>
-              
+              <li class="nav-item">
+                <a href="/my-project/todo-applications"> My Project </a>
+                  </li>
               </ul>
             </div>
           </div>
@@ -140,7 +143,7 @@ export default {
     return {
       currentIndex: 0,
       previousIndex: null, 
-      menuItems: ["Home", "About", "Resume", "Contacts", "Project"],
+      menuItems: ["Home", "About", "Resume", "Contacts"],
       homeStaticData: {
         firstName: 'Locel',
         lastName: 'F. Degamo',
@@ -169,8 +172,8 @@ export default {
         HomeComponent,
         AboutComponent,
         ResumeComponent,
-        ContactusComponent,
-        TodoApplicationComponent
+        ContactusComponent
+        
       }
     };
   },
