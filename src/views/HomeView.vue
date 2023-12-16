@@ -91,6 +91,10 @@
           :city="contactStaticData.city"  
           :email="contactStaticData.email"  
           />
+            <component v-else-if="currentIndex === 4" 
+          :is="components.TodoApplicationComponent"
+         
+          />
         </div>
       </transition>
     </div>
@@ -125,13 +129,15 @@ import HomeComponent from '@/components/HomeComponent.vue'
 import AboutComponent from '@/components/AboutComponent.vue'
 import ResumeComponent from '@/components/ResumeComponent.vue'
 import ContactusComponent from '@/components/ContactusComponent.vue'
+import TodoApplicationComponent from '@/components/TodoApplicationComponent.vue'
+
 
 export default {
   data() {
     return {
       currentIndex: 0,
       previousIndex: null, 
-      menuItems: ["Home", "About", "Resume", "Contacts"],
+      menuItems: ["Home", "About", "Resume", "Contacts", "ToDoApplication"],
       homeStaticData: {
         firstName: 'Locel',
         lastName: 'F. Degamo',
@@ -160,7 +166,8 @@ export default {
         HomeComponent,
         AboutComponent,
         ResumeComponent,
-        ContactusComponent
+        ContactusComponent,
+        TodoApplicationComponent
       }
     };
   },
