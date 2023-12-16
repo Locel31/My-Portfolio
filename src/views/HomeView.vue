@@ -18,6 +18,9 @@
         
       </div> -->
        <div class="mobile menu menu-item my-3 d-flex justify-content-between align-items-center" v-if="currentIndex !== 0">
+        <div>
+          <h2 class="fw-bold text-white">{{homeStaticData.firstName}} {{homeStaticData.lastName}}</h2>
+        </div>
         <nav class=" navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -137,7 +140,7 @@ export default {
     return {
       currentIndex: 0,
       previousIndex: null, 
-      menuItems: ["Home", "About", "Resume", "Contacts", "ToDoApplication"],
+      menuItems: ["Home", "About", "Resume", "Contacts", "Project"],
       homeStaticData: {
         firstName: 'Locel',
         lastName: 'F. Degamo',
@@ -152,14 +155,14 @@ export default {
         city: "Camolinas Poblacion Cordova, Cebu 6017",
         age: 22,
         degree: "Bachelor of Science in Information Technology",
-        email: "jealoceldegamo@gmail.com",
+        email: "jealoceldegamo31@gmail.com",
         description: "Hello! I'm a creative professional specializing in UI/UX design, graphic design, and website development. I bring ideas to life through visually compelling interfaces and seamless user experiences. Let's collaborate to create something extraordinary!",
         objective: "Seeking a challenging career with a progressive organization thatprovides an opportunity to capitalize my technical skills and abilities in the field of information technology (IT).",
         introText: "Explore and learn more about our wonderful home. We are excited to share our story with you."
       },
       contactStaticData: {
         city: "Camolinas Poblacion Cordova, Cebu 6017",
-        email: "jealoceldegamo@gmail.com",
+        email: "jealoceldegamo31@gmail.com",
         phone: "09074299568",
       },
       components: {
@@ -293,7 +296,7 @@ color: white;
     border-bottom: 2px solid #18d26e;
     padding-bottom: 6px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
  .desktop {
    display: block;
  }
@@ -315,6 +318,7 @@ color: white;
  #header.header-top .mobile{
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
  }
  #header.header-top .mobile .navbar {
     width: 100%;

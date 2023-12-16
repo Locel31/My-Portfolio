@@ -9,8 +9,10 @@
         <div class="row">
          <div class="col-lg-12 px-4 " >
             <div class="card">
+                 
                 <div class="p-3">
                     <form class="px-4">
+                        <h3 class="fw-bold">TODO LIST</h3>
                         <div class="row mx-0">
                             <input type="text" ref="task" class="form-control" placeholder="Task" />
                         </div>
@@ -22,13 +24,25 @@
                 <div class="p-3" v-for="dataitem in data" :key="dataitem.id">
                     <div class=" d-flex px-4 align-items-center py-2" style="border-bottom: 1px solid green">
                         <div class="col-8">
-                            <h4 class="fw-bold">{{ dataitem.task }} </h4>
+                            <h4 :class="{ 'fw-bold': dataitem.status === 1, 'text-decoration-line-through': dataitem.status === 1 }">{{ dataitem.task }} </h4>
                         </div>
                         <div class="col-4 text-center" > 
-                            <button class="btn btn-warning" @click="deleteEduc(dataitem.id)">delete</button>
+                            <div class="d-flex gap-2 flex-nowrap">
+                                <div><button class="btn btn-danger" :disabled="dataitem.status === 1" @click="updateData(dataitem.id, dataitem.task)">done</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-warning" @click="deleteEduc(dataitem.id)">delete</button>
+                                </div>
+                            </div>
+                           
                         </div>
                     </div>
+                     
                 </div>
+                <div class="m-3">
+                                <button class="btn btn-secondary" @click="clearData">Clear</button>
+
+                    </div>
             </div>
          </div>
       </div>
@@ -67,6 +81,32 @@ export default {
                 console.log(e)
             }
         },
+deleteEduc: async (id) => {
+         try {
+                await deleteDoc(doc(db, 'todo', id));
+                window.alert('Todo Application deleted successfully!');
+                window.location.reload();
+                this.fetchData();
+           } catch(e) {
+             console.log(e)
+           }
+           
+      },
+      updateData: async (id, taskVal) => {
+         try {
+            
+                await setDoc(doc(db, 'todo', id),{
+                    task: taskVal,
+                    status: 1
+                });
+                window.alert('Todo Application updated successfully!');
+                window.location.reload();
+                this.fetchData();
+           } catch(e) {
+             console.log(e)
+           }
+           
+      },
         async fetchData() {
             try {
                 this.data = [];
@@ -89,17 +129,25 @@ export default {
             }catch (e) {
                 console.error('Error fetching user data:', e);
             }
-      }, 
-      deleteEduc: async (id) => {
-         try {
-                await deleteDoc(doc(db, 'todo', id));
-                window.alert('Todo Application delete successfully!');
-                 window.location.reload();
-           } catch(e) {
-             console.log(e)
-           }
-           
-      }
+      },
+      async clearData() {
+        try {
+                        this.data = []; // Clear the entire data list
+
+                const q = collection(db, 'todo');
+                const querySnapshot = await getDocs(q);
+                
+                querySnapshot.forEach(async (sdsa) => {
+                    await deleteDoc(doc(db, 'todo', sdsa.id));
+                });
+
+                window.alert('Todo Application database cleared successfully!');
+                this.fetchData();
+            } catch (e) {
+                console.log(e);
+            }
+        },
+      
     }
     
 }

@@ -19,7 +19,6 @@
             <div class="col-lg-6">
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>{{bday}}</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>{{website}}</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{phone}}</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>{{city}}</span></li>
               </ul>
@@ -38,6 +37,19 @@
           </p>
         </div>
       </div>
+         <div>
+      <div class="row">
+        <div class="col-12">
+          <h2 class="fw-bold" style="color:#35e788">My Project</h2>
+        </div>
+        <div class="col-12 ">
+            <div class="card">
+             <img src="@/assets/img/todo.JPG.jpg" class="img-fluid" alt="">
+              <span class="py-2 px-4"> Todo Application</span>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 </template>

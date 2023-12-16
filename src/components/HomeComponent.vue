@@ -6,6 +6,7 @@
       <h1 class="display-4 fw-bold ">{{ firstName }} {{ lastName }}</h1>
       <h2>I'm a passionate <span>graphic designer & web developer</span> from New York</h2>
     </div>
+ 
   </div>
 </template>
 
