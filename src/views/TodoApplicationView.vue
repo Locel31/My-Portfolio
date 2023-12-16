@@ -1,6 +1,11 @@
 <template>
     <div class="resume text-start mt-5">
-    <div data-aos="fade-up"
+    <a href="/">
+        <button type="button" class="btn btn-success">
+            Back
+            </button>
+    </a>
+        <div data-aos="fade-up"
      data-aos-duration="1000" >
       <div class="section-title">
         <h2>MY PROJECT</h2>
