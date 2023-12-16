@@ -1,24 +1,67 @@
 <template>
 <header :class="{ 'header-top': currentIndex !== 0 }" id="header">
    <div class="container-fluid w-75 " :class="{ 'text-start': currentIndex === 0 }">
-      <div class="menu my-3 d-flex justify-content-between align-items-center" v-if="currentIndex !== 0">
-        <!-- Menu buttons are rendered when currentIndex is 0 -->
+      <!-- <div class="menu my-3 d-flex justify-content-between align-items-center" v-if="currentIndex !== 0">
          <div>
             <h2 class="fw-bold text-white">{{homeStaticData.firstName}} {{homeStaticData.lastName}}</h2>
          </div>
          <div>
-<button
-          v-for="(item, index) in menuItems"
-          :key="index"
-          @click="goToItem(index)"
-          :class="{ 'active': index === currentIndex }"
-        >
-          {{ item }}
-        </button>
+          <button
+            v-for="(item, index) in menuItems"
+            :key="index"
+            @click="goToItem(index)"
+            :class="{ 'active': index === currentIndex }"
+          >
+            {{ item }}
+          </button>
          </div>
         
-      </div>
+      </div> -->
+       <div class="mobile menu menu-item my-3 d-flex justify-content-between align-items-center" v-if="currentIndex !== 0">
+        <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+              <ul class=" navbar-nav me-auto mb-2 mb-lg-0 menu">
+                <li class="nav-item"  v-for="(item, index) in menuItems"
+            :key="index"
+            @click="goToItem(index)"
+            :class="{ ' active': index === currentIndex }">
+                  {{ item }}
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+ <div class="mobile menu menu-item" v-if="currentIndex === 0">
+        <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <ul class=" navbar-nav me-auto mb-2 mb-lg-0 menu">
+                <li class="nav-item"  v-for="(item, index) in menuItems"
+            :key="index"
+            @click="goToItem(index)"
+            :class="{ ' active': index === currentIndex }">
+                  {{ item }}
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     <div class="slider-container">
       <transition name="slide" mode="out-in">
         <div :key="currentIndex" class="slider-item">
@@ -51,15 +94,27 @@
         </div>
       </transition>
     </div>
-      <div class="menu" v-if="currentIndex === 0">
-        <button
-          v-for="(item, index) in menuItems"
-          :key="index"
-          @click="goToItem(index)"
-          :class="{ 'active': index === currentIndex }"
-        >
-          {{ item }}
-        </button>
+      <div class="desktop menu menu-item" v-if="currentIndex === 0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <ul class=" navbar-nav me-auto mb-2 mb-lg-0 menu">
+                <li class="nav-item"  v-for="(item, index) in menuItems"
+            :key="index"
+            @click="goToItem(index)"
+            :class="{ ' active': index === currentIndex }">
+                  {{ item }}
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
   </div>
 </header>
@@ -136,6 +191,32 @@ export default {
   border-bottom: 3px solid #35e788;;
 }
 
+.menu-item {
+  margin-top: 20px;
+}
+.menu-item .navbar {
+  background-color: transparent!important;
+}
+.menu-item .navbar .container-fluid  {
+  padding: 0!important;
+}
+.menu-item .nav-item {
+  margin-right: 10px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  color: white!important;;
+}
+
+.menu-item .nav-item.active {
+  font-weight: bold;
+  border-bottom: 3px solid #35e788;
+}
+
+.menu-item .navbar-toggler {
+  background-color: #35e788;
+}
+
 .slider-container {
   overflow: hidden;
 }
@@ -205,5 +286,44 @@ color: white;
     border-bottom: 2px solid #18d26e;
     padding-bottom: 6px;
 }
+@media screen and (max-width: 1440px) {
+ .desktop {
+   display: block;
+ }
+ .mobile {
+  display: none;
+ }
+}
 
+@media screen and (max-width: 989px) {
+ .desktop {
+  display: none;
+ }
+ .mobile {
+  position: absolute;
+  width: 75%;
+  top: 0;
+  display: block;
+ }
+ #header.header-top .mobile{
+    width: 100%;
+    position: relative;
+ }
+ #header.header-top .mobile .navbar {
+    width: 100%;
+    position: relative;
+ }
+ 
+ #header.header-top .mobile .navbar .navbar-nav {
+    text-align: start;
+ }
+ #header.header-top .mobile .navbar .navbar-nav .nav-item, .mobile .navbar .navbar-nav .nav-item  {
+    font-size: 20px;
+ }
+ .section-title p, .contact .info-box h3{
+  font-size: 23px;
+ }.resume .resume-title {
+  font-size: 22px;
+ }
+}
 </style>
