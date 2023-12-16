@@ -43,10 +43,12 @@
           <h2 class="fw-bold" style="color:#35e788">My Project</h2>
         </div>
         <div class="col-12 ">
+          <a href="/my-project/todo-application">
             <div class="card">
              <img src="@/assets/img/todo.JPG.jpg" class="img-fluid" alt="">
               <span class="py-2 px-4"> Todo Application</span>
             </div>
+            </a>
         </div>
       </div>
     </div>
