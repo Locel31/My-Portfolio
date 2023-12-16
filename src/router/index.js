@@ -9,6 +9,7 @@ import EducationEdit from '../views/EducationEditView.vue'
 import Contactus from '../views/ContactusView.vue'
 import ProfessionalExperience from '../views/ProfessionalExperienceView.vue'
 import ProfessionalExperienceEdit from '../views/ProfessionalExperienceEditView.vue'
+import TodoApplication from '../views/TodoApplicationView.vue'
 
 const routes = [
   {
@@ -49,6 +50,10 @@ const routes = [
     path: '/admin/contact-us',
     name: 'Contactus',
     component: Contactus
+  },{
+    path: '/my-project/todo-application',
+    name: 'TodoApplication',
+    component: TodoApplication
   }
 ]
 
