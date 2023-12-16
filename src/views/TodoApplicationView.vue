@@ -1,14 +1,12 @@
-<template>
-  <div> test
-    </div>
-</template>
-
-<script>
-
-export default {
-    components: {
-        
+                window.alert('Todo Application database cleared successfully!');
+                this.fetchData();
+            } catch (e) {
+                console.log(e);
+            }
+        },
+      
     }
+    
 }
 </script>
 
