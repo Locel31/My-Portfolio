@@ -1,9 +1,9 @@
 <template>
-    <div class="resume text-start">
+    <div class="resume text-start mt-5">
     <div data-aos="fade-up"
      data-aos-duration="1000" >
       <div class="section-title">
-        <h2>TO DO APPLICATION</h2>
+        <h2>MY PROJECT</h2>
         <p>CHECK MY TO DO APPLICATION</p>
       </div>
         <div class="row">
