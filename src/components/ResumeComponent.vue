@@ -110,16 +110,19 @@ console.error('Error fetching user data:', e);
           const q = collection(db, 'education'); 
           const querySnapshot = await getDocs(q);
           querySnapshot.forEach((doc) => {
+             const dateTimestamp = doc.data().date;
               const educationData = {
                 id: doc.id,
                 title: doc.data().title,
                 school: doc.data().school,
                 year: doc.data().year,
                 description: doc.data().description,
+                date: dateTimestamp
               };
               this.educations.push(educationData);
           });
           this.educations.sort((a, b) => a.date - b.date);
+          console.log('After sorting:', this.educations);
         }catch (e) {
 console.error('Error fetching user data:', e);
         }

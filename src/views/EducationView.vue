@@ -76,12 +76,12 @@
 </template>
 
 <script>
-import { db, addDoc, collection, setDoc, doc, onSnapshot, orderBy, getDocs, deleteDoc } from '@/firebase.js';
+import { db, addDoc, collection, setDoc, doc, onSnapshot, orderBy, getDocs, deleteDoc , Timestamp} from '@/firebase.js';
 import { ref, watch, onMounted } from 'vue';
 import {useRoute} from "vue-router";
 
-
 export default { 
+    
     data(){
         return {
             educations: [],
@@ -109,7 +109,7 @@ export default {
                     year: year,
                     school: school,
                     description: description,
-                    date: Date.now(),
+                    date: Timestamp,
                  });
                   console.log('Document added with ID:', newDocRef.id);
                  this.$refs.title.value = '';
@@ -129,17 +129,20 @@ export default {
             const querySnapshot = await getDocs(q);
 
             querySnapshot.forEach((doc) => {
+               const dateTimestamp = doc.data().date;
+
                 const educationData = {
                     id: doc.id,
                     title: doc.data().title,
                     school: doc.data().school,
                     year: doc.data().year,
                     description: doc.data().description,
+                    date: dateTimestamp
                 };
                 this.educations.push(educationData);
                 
             });
-            this.educations.sort((a, b) => b.date - a.date);
+            this.educations.sort((a, b) => a.date - b.date);
             }catch (e) {
                 console.error('Error fetching user data:', e);
             }
