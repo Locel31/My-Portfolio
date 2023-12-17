@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me text-start">
+  <div class="about-me text-start mb-5">
     <div data-aos="fade-up"
      data-aos-duration="1000" >
       <div class="section-title">
@@ -50,7 +50,7 @@
             </div>
             </a>
         </div>
-        <div class="col-12 ">
+        <div class="col-12 mt-4">
           <a href="/my-project/quiz">
             <div class="card">
              <img src="@/assets/img/FEAD1660-CC3D-4B8B-9DC4-815F0F3901B0.jpeg" class="img-fluid" alt="">
