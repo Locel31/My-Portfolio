@@ -11,6 +11,7 @@ import ProfessionalExperience from '../views/ProfessionalExperienceView.vue'
 import ProfessionalExperienceEdit from '../views/ProfessionalExperienceEditView.vue'
 import TodoApplication from '../views/TodoApplicationView.vue'
 import Quiz from '../views/QuizView.vue'
+import MyProject from '../views/MyProjectView.vue'
 
 const routes = [
   {
@@ -59,6 +60,10 @@ const routes = [
     path: '/my-project/quiz',
     name: 'Quiz',
     component: Quiz
+  },{
+    path: '/my-project',
+    name: 'MyProject',
+    component: MyProject
   }
 ]
 
