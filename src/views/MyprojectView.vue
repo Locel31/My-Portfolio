@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <a href="/">
+        <button type="button" class="btn btn-success">
+            Back Home
+            </button>
+    </a>
     <div class="row">
         <div class="col-12">
           <h2 class="fw-bold" style="color:#35e788">My Project</h2>
