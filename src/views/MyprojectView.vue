@@ -1,5 +1,6 @@
 <template>
-  <div class="row">
+  <div class="container">
+    <div class="row">
         <div class="col-12">
           <h2 class="fw-bold" style="color:#35e788">My Project</h2>
         </div>
@@ -20,6 +21,7 @@
             </a>
         </div>
       </div>
+    </div>
 </template>
 
 <script>
