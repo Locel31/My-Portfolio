@@ -11,7 +11,7 @@ import ProfessionalExperience from '../views/ProfessionalExperienceView.vue'
 import ProfessionalExperienceEdit from '../views/ProfessionalExperienceEditView.vue'
 import TodoApplication from '../views/TodoApplicationView.vue'
 import Quiz from '../views/QuizView.vue'
-import MyProject from '../views/MyProjectView.vue'
+import MyProject from '../views/MyprojectView.vue'
 
 const routes = [
   {
