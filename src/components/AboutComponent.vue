@@ -50,6 +50,14 @@
             </div>
             </a>
         </div>
+        <div class="col-12 ">
+          <a href="/my-project/quiz">
+            <div class="card">
+             <img src="@/assets/img/todo.JPG.jpg" class="img-fluid" alt="">
+              <span class="py-2 px-4">Quiz Test</span>
+            </div>
+            </a>
+        </div>
       </div>
     </div>
   </div>
