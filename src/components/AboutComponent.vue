@@ -53,7 +53,7 @@
         <div class="col-12 ">
           <a href="/my-project/quiz">
             <div class="card">
-             <img src="@/assets/img/todo.JPG.jpg" class="img-fluid" alt="">
+             <img src="@/assets/img/FEAD1660-CC3D-4B8B-9DC4-815F0F3901B0.jpeg" class="img-fluid" alt="">
               <span class="py-2 px-4">Quiz Test</span>
             </div>
             </a>
