@@ -1,6 +1,6 @@
 <template>
     <div class="resume text-start mt-5">
-    <a href="/">
+    <a href="/my-project">
         <button type="button" class="btn btn-success">
             Back
             </button>
