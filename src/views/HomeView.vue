@@ -213,7 +213,7 @@ export default {
 .menu-item .navbar .container-fluid  {
   padding: 0!important;
 }
-.menu-item .nav-item {
+.menu-item .nav-item, .menu-item .nav-item a{
   margin-right: 10px;
   font-size: 16px;
   border: none;
