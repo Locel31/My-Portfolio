@@ -37,7 +37,7 @@
                   {{ item }}
                 </li>
                <li class="nav-item">
-                <a href="/my-project/todo-application" class="text-decoration-none"> My Project </a>
+                <a href="/my-project/todo-application" class="text-decoration-none fw-normal"> My Project </a>
                   </li>
               </ul>
             </div>
@@ -62,7 +62,7 @@
                   {{ item }}
                 </li>
               <li class="nav-item">
-                <a href="/my-project/todo-application" class="text-decoration-none"> My Project </a>
+                <a href="/my-project/todo-application" class="text-decoration-none fw-normal"> My Project </a>
                   </li>
               </ul>
             </div>
@@ -119,7 +119,7 @@
                   {{ item }}
                 </li>
               <li class="nav-item">
-                <a href="/my-project/todo-application" class="text-decoration-none"> My Project </a>
+                <a href="/my-project/todo-application" class="text-decoration-none fw-normal"> My Project </a>
                   </li>
               </ul>
             </div>
