@@ -10,6 +10,7 @@ import Contactus from '../views/ContactusView.vue'
 import ProfessionalExperience from '../views/ProfessionalExperienceView.vue'
 import ProfessionalExperienceEdit from '../views/ProfessionalExperienceEditView.vue'
 import TodoApplication from '../views/TodoApplicationView.vue'
+import Quiz from '../views/QuizView.vue'
 
 const routes = [
   {
@@ -54,6 +55,10 @@ const routes = [
     path: '/my-project/todo-application',
     name: 'TodoApplication',
     component: TodoApplication
+  },{
+    path: '/my-project/quiz',
+    name: 'Quiz',
+    component: Quiz
   }
 ]
 
