@@ -3,7 +3,7 @@
     <div class="text-start">
 			<a href="/">
         <button type="button" class="btn btn-success">
-            Back
+            Back Home
             </button>
     </a>
 			</div>
