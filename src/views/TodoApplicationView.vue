@@ -7,7 +7,7 @@
     </a>
         <div data-aos="fade-up"
      data-aos-duration="1000" >
-      <div class="section-title">
+      <div class="section-title mt-4">
         <h2>MY PROJECT</h2>
         <p>CHECK MY TO DO APPLICATION</p>
       </div>
