@@ -158,14 +158,14 @@ export default {
         city: "Camolinas Poblacion Cordova, Cebu 6017",
         age: 22,
         degree: "Bachelor of Science in Information Technology",
-        email: "jealoceldegamo31@gmail.com",
+        email: "jeanloceldegamo31@gmail.com",
         description: "Hello! I'm a creative professional specializing in UI/UX design, graphic design, and website development. I bring ideas to life through visually compelling interfaces and seamless user experiences. Let's collaborate to create something extraordinary!",
         objective: "Seeking a challenging career with a progressive organization thatprovides an opportunity to capitalize my technical skills and abilities in the field of information technology (IT).",
         introText: "Explore and learn more about our wonderful home. We are excited to share our story with you."
       },
       contactStaticData: {
         city: "Camolinas Poblacion Cordova, Cebu 6017",
-        email: "jealoceldegamo31@gmail.com",
+        email: "jeanloceldegamo31@gmail.com",
         phone: "09074299568",
       },
       components: {
