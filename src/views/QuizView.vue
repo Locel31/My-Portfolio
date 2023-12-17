@@ -69,8 +69,8 @@ const NextQuestion = () => {
 </script>
 
 <template>
-	<main>
-		<h1>The Quiz</h1>
+	<main class="my-4">
+		<h1 class="text-white fw-bold">The Quiz</h1>
 		
 		<section class="quiz" v-if="!quizCompleted">
 			<div class="quiz-info">
@@ -121,8 +121,8 @@ const NextQuestion = () => {
 		</section>
 
 		<section v-else>
-			<h2>You have finished the quiz!</h2>
-			<p>Your score is {{ score }}/{{ questions.length }}</p>
+			<h2 class="text-white fw-bold">You have finished the quiz!</h2>
+			<p class="text-white fw-bold">Your score is {{ score }}/{{ questions.length }}</p>
 		</section>
 	</main>
 </template>
