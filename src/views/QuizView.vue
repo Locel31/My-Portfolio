@@ -71,11 +71,13 @@ const NextQuestion = () => {
 <template>
 	 
 	<main class="my-4">
-		    <a href="/">
+		<div class="text-start">
+			<a href="/">
         <button type="button" class="btn btn-success">
             Back
             </button>
     </a>
+			</div>
 		<h1 class="text-white fw-bold">The Quiz</h1>
 		
 		<section class="quiz" v-if="!quizCompleted">
