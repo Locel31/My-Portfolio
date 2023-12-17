@@ -72,7 +72,7 @@ const NextQuestion = () => {
 	 
 	<main class="my-4">
 		<div class="text-start">
-			<a href="/">
+			<a href="/my-project">
         <button type="button" class="btn btn-success">
             Back
             </button>
